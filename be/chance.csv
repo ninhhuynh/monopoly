@@ -1,0 +1,10 @@
+type;desc;amount;dest
+tojail;Go to jail.;;
+nojail;Get out of jail free.;;
+goto;Move to a random place;;-1
+getmoney;Bank pays you a dividend of $50.;50;
+goto;Go Back Three 3 Spaces.;-3;
+repair;Make general repairs on all your property: For each house pay $25, For each hotel pay $100.;25;
+giveall;You have been elected Chairman of the Board. Pay each player $50.;50;
+getmoney;Your building and loan matures;50;
+getmoney;You have won a crossword competition. Collect $100.;50;

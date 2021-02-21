@@ -1,0 +1,15 @@
+type;desc;amount;dest
+getmoney;Inhertit 100$;100;
+getmoney;You have won second prize in a beauty contest. Collect $10.;10;
+repair;You are assessed for street repairs: Pay $40 per house and $200 per hotel you own.;40;
+getmoney;Receive $25 consultancy fee.;50;
+lostmoney;Clubbing with friends. Pay $50.;50;
+lostmoney;Hospital Fees. Pay $100.;100;
+collect;It is your birthday. Collect $20 from every player.;20;
+getmoney;Income tax refund. Collect $20.;20;
+getmoney;Holiday Fund matures. Receive $100.;100;
+tojail;Go to jail.;;
+nojail;Get out of jail free.;;
+getmoney;Bank error in your favour. Collect $200.;200;
+goto;"Advance to ""Go"".";;0
+getmoney;From a sale of Bitcoin, you get $500.;500;
