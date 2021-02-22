@@ -465,8 +465,12 @@ let game = {
     if (answer) {
       let property = this.askTrade.property;
       let ownerindex = property.state.owner;
+      let mortaged = property.state.rent == -1;
       this.players[ownerindex].RemoveProperty(property);
       this.GiveProperty(this.askTrade.askerIndex, property.index);
+      if (mortaged) {
+        property.state.rent = -1;
+      }
       this.TransferMoney(
         this.askTrade.askerIndex,
         ownerindex,
