@@ -1,5 +1,15 @@
-# mfe
+# CLIENT
 
+## app.vue
+  Choosing icon, name and start game, send register request to server
+
+## game.vue
+  handling requests and responses
+  
+## board.vue
+  the monopoly game main UI
+  
+# VUE
 ## Project setup
 ```
 npm install
