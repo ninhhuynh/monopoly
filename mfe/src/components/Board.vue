@@ -29,12 +29,22 @@
         >{{ viewCard.text[i] }}
       </strong>
     </div>
-    <img
-      v-for="(player, i) in game.players"
-      :src="require(`../assets/icons/${player.img}`)"
-      :style="GetIconStyle(player.position, game.players.indexOf(player))"
-      :key="'player' + i"
-    />
+    <div v-for="(player, i) in game.players" :key="'player' + i">
+      <img
+        :src="require(`../assets/icons/${player.img}`)"
+        :style="GetIconStyle(player.position, game.players.indexOf(player))"
+      />
+      <div :style="PlayersInfo(player.index)">
+        <img
+          style="max-width:100%;max-height:100%;"
+          :src="require(`../assets/icons/${player.img}`)"
+        />
+        <strong style="position:absolute; top: 22%">{{
+          player.money + "$"
+        }}</strong>
+      </div>
+    </div>
+
     <div
       v-for="(p, i) in ownedProperty"
       :key="'Property' + i"
@@ -82,6 +92,15 @@ export default {
   },
   computed: {},
   methods: {
+    PlayersInfo(i) {
+      return {
+        width: "5%",
+        height: "5%",
+        position: "absolute",
+        left: "100%",
+        top: 6 * i + "%",
+      };
+    },
     AskBuy(property) {
       if (this.game.turn != this.user.index) return;
       if (!this.game.askTrade.canAsk) return;
@@ -157,6 +176,17 @@ export default {
 #block button {
   font-size: 10px;
   padding: 1px 1px;
+}
+#players {
+  width: 5%;
+  height: 5%;
+  position: absolute;
+  left: 100%;
+  top: 0%;
+}
+#players img {
+  max-width: 100%;
+  max-height: 100%;
 }
 #block strong {
   position: absolute;
